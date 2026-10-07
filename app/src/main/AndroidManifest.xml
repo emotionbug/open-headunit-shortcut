@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Android 11+ filters package lookups unless the target is declared here. -->
+    <queries>
+        <package android:name="com.andrerinas.headunitrevived" />
+    </queries>
+
+    <!-- Stateless: no preferences, databases or user files exist to transfer. -->
+    <application
+        android:allowBackup="false"
+        tools:ignore="DataExtractionRules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.NoDisplay">
+        <!-- A separate package can be selected as the OEM navigation app. The activity
+             hands off to Open Headunit and finishes without owning audio or a service. -->
+        <activity
+            android:name=".MainActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!-- Some OEM selectors list every launcher app; others look for map apps. -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.APP_MAPS" />
+                <category android:name="android.intent.category.APP_NAVIGATION" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

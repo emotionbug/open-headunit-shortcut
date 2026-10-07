@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Open Headunit Shortcut</string>
+    <string name="open_headunit_missing">Install or enable Open Headunit first, then try again.</string>
+    <string name="open_headunit_unavailable">Could not open Open Headunit. Check that it is installed, enabled and allowed to run.</string>
+</resources>

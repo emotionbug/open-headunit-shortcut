@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="open_headunit_missing">Open Headunit을 설치하거나 사용 설정한 뒤 다시 시도해 주세요.</string>
+    <string name="open_headunit_unavailable">Open Headunit을 열 수 없습니다. 앱이 설치되어 있고 실행이 허용되어 있는지 확인해 주세요.</string>
+</resources>
